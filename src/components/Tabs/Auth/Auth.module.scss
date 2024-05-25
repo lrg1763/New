@@ -1,0 +1,98 @@
+.profile {
+	display: flex; // Flexbox для контейнера профиля
+	flex-direction: column; // Вертикальное расположение содержимого
+	justify-content: center; // Центрирование содержимого по вертикали
+	align-items: center; // Центрирование содержимого по горизонтали
+	height: 75%; // Высота контейнера 75%
+}
+
+.title {
+	font-size: 30px; // Размер шрифта заголовка
+	margin-bottom: 30px; // Нижний отступ заголовка
+}
+
+.content {
+	width: 50%; // Ширина контейнера содержимого 50%
+}
+
+.error {
+	height: 10px; // Высота контейнера ошибки
+	color: #dc3d3d; // Цвет текста ошибки
+	font-size: 14px; // Размер шрифта ошибки
+	line-height: 1; // Высота строки
+	margin-bottom: 10px; // Нижний отступ ошибки
+}
+
+.field {
+	width: 100%; // Ширина поля ввода 100%
+	overflow: hidden; // Скрытие переполняющего содержимого
+	text-overflow: ellipsis; // Добавление многоточия при переполнении
+	white-space: nowrap; // Запрещаем перенос строк
+	background-color: #333; // Фон поля ввода
+	color: #fff; // Цвет текста поля ввода
+	padding: 5px 10px; // Внутренние отступы
+	margin-bottom: 15px; // Нижний отступ
+	outline: 1px solid #222; // Граница поля ввода
+
+	&:focus {
+		outline-color: #dc3d3d; // Цвет границы при фокусе
+	}
+}
+
+.btn_list {
+	display: flex; // Flexbox для списка кнопок
+	justify-content: space-between; // Распределение кнопок по краям
+	margin-top: 10px; // Верхний отступ
+}
+
+.btn {
+	width: 47%; // Ширина кнопки 47%
+	cursor: pointer; // Указатель при наведении
+	background-color: #606060; // Фон кнопки
+	color: #fff; // Цвет текста кнопки
+	text-align: center; // Центрирование текста
+	padding: 5px 10px; // Внутренние отступы
+	user-select: none; // Запрещаем выделение текста
+
+	&:hover {
+		background-color: #dc3d3d; // Фон кнопки при наведении
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 768px
+@media (max-width: 768px) {
+	.content {
+		width: 85%; // Увеличиваем ширину контейнера содержимого до 85%
+	}
+
+	.title {
+		font-size: 25px; // Уменьшаем размер шрифта заголовка
+		margin-bottom: 10px; // Уменьшаем нижний отступ заголовка
+	}
+
+	.field {
+		margin-bottom: 10px; // Уменьшаем нижний отступ поля ввода
+	}
+
+	.error {
+		font-size: 12px; // Уменьшаем размер шрифта ошибки
+		margin-bottom: 5px; // Уменьшаем нижний отступ ошибки
+	}
+
+	.btn_list {
+		flex-direction: column; // Располагаем кнопки в колонку
+	}
+
+	.btn {
+		width: 100%; // Устанавливаем ширину кнопки 100%
+		margin-bottom: 5px; // Нижний отступ кнопки
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 420px
+@media (max-width: 420px) {
+	.error {
+		font-size: 10px; // Уменьшаем размер шрифта ошибки
+		margin-bottom: 5px; // Нижний отступ ошибки
+	}
+}

@@ -1,0 +1,173 @@
+header {
+	height: 50px; // Высота заголовка
+}
+
+.item {
+	position: fixed; // Фиксированное положение относительно окна браузера
+	display: flex; // Flexbox для элемента
+	align-items: center; // Выравнивание элементов по вертикали
+	width: 100%; // Ширина элемента 100%
+	height: 50px; // Высота элемента 50px
+	background: #eeeeee; // Фон элемента
+	z-index: 100; // Высокий z-index для отображения поверх других элементов
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); // Тень для элемента
+}
+
+.container {
+	display: flex; // Flexbox для контейнера
+	align-items: center; // Выравнивание элементов по вертикали
+	justify-content: space-between; // Распределение элементов по краям
+	position: relative; // Относительное позиционирование
+	margin: 0 auto; // Автоматические внешние отступы для центрирования
+	width: 1280px; // Ширина контейнера
+}
+
+.logo {
+	font-weight: 600; // Жирный шрифт
+	font-size: 32px; // Размер шрифта
+	cursor: pointer; // Указатель при наведении
+	transition: all 0.3s ease; // Переход для всех свойств
+	user-select: none; // Запрещаем выделение текста
+	color: #000; // Цвет текста
+	text-decoration: none; // Убираем подчеркивание текста
+
+	&:hover {
+		color: #dc3d3d; // Цвет текста при наведении
+	}
+}
+
+.nav {
+	font-weight: 600; // Жирный шрифт
+	list-style: none; // Убираем маркеры списка
+	margin-bottom: 0; // Нижний отступ
+	margin-left: 0; // Левый отступ
+
+	li {
+		display: inline; // Отображение элементов списка в одну строку
+		margin-left: 25px; // Левый отступ
+		cursor: pointer; // Указатель при наведении
+		transition: all 0.3s ease; // Переход для всех свойств
+	}
+}
+
+.link,
+.link:visited {
+	color: #000 !important; // Цвет текста и посещенных ссылок
+	text-decoration: none; // Убираем подчеркивание текста
+
+	&:hover {
+		color: #dc3d3d !important; // Цвет текста при наведении
+		filter: brightness(100%); // Фильтр яркости при наведении
+	}
+	&.active {
+		text-decoration: underline; // Подчеркивание активной ссылки
+	}
+}
+
+.btn_cart {
+	position: relative; // Относительное позиционирование
+	top: -2px; // Смещение вверх
+	margin-right: 10px; // Правый отступ
+	cursor: pointer; // Указатель при наведении
+	transition: all 0.3s ease; // Переход для всех свойств
+	width: 25px; // Ширина кнопки
+	height: 25px; // Высота кнопки
+
+	&:hover,
+	&.active {
+		color: #dc3d3d; // Цвет текста при наведении и активном состоянии
+		transform: scale(1.2); // Масштабирование при наведении и активном состоянии
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 1400px
+@media (max-width: 1400px) {
+	.container {
+		max-width: 1140px; // Уменьшение максимальной ширины контейнера
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 1200px
+@media (max-width: 1200px) {
+	.container {
+		max-width: 960px; // Уменьшение максимальной ширины контейнера
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 992px
+@media (max-width: 992px) {
+	.container {
+		max-width: 720px; // Уменьшение максимальной ширины контейнера
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 768px
+@media (max-width: 768px) {
+	.container {
+		max-width: 540px; // Уменьшение максимальной ширины контейнера
+	}
+
+	.item {
+		padding: 5px 0; // Внутренние отступы
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		font-size: 20px; // Уменьшение размера шрифта
+		margin-bottom: 3px; // Нижний отступ
+	}
+
+	.nav {
+		font-size: 12px; // Уменьшение размера шрифта
+	}
+
+	.btn_cart {
+		width: 20px; // Уменьшение ширины кнопки
+		height: 20px; // Уменьшение высоты кнопки
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 576px
+@media (max-width: 576px) {
+	.container {
+		width: 100%; // Ширина контейнера 100%
+		padding: 0px 20px; // Внутренние отступы
+	}
+
+	.logo {
+		font-size: 18px; // Уменьшение размера шрифта
+	}
+
+	.nav {
+		padding-left: 5px; // Внутренний отступ слева
+
+		li {
+			margin-left: 15px; // Уменьшение левого отступа
+		}
+	}
+
+	.btn_cart {
+		margin-right: 0; // Убираем правый отступ
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 420px
+@media (max-width: 420px) {
+	.item {
+		padding: 0; // Убираем внутренние отступы
+	}
+
+	.nav {
+		li {
+			margin-left: 10px; // Уменьшение левого отступа
+			font-size: 10px; // Уменьшение размера шрифта
+		}
+	}
+
+	.btn_cart {
+		width: 15px; // Уменьшение ширины кнопки
+		height: 15px; // Уменьшение высоты кнопки
+		margin-right: 5px; // Уменьшение правого отступа
+	}
+}

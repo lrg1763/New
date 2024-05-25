@@ -1,0 +1,302 @@
+/* Основной контейнер */
+.container {
+	width: 1280px; /* Устанавливаем ширину контейнера */
+	margin: 0 auto; /* Центрируем контейнер */
+	padding: 0; /* Убираем отступы */
+	flex: 1 0 auto; /* Flex-параметры для авторастягивания */
+}
+
+/* Блок приветствия */
+.greeting {
+	margin: 40px 0; /* Отступы сверху и снизу */
+	width: 50%; /* Ширина блока приветствия */
+
+	&__text {
+		font-size: 50px; /* Размер шрифта */
+		margin: 0; /* Убираем отступы */
+
+		&.red {
+			color: #dc3d3d; /* Красный цвет текста */
+		}
+	}
+}
+
+/* Блок описания */
+.description {
+	text-align: justify; /* Выравнивание текста по ширине */
+
+	&__text {
+		font-size: 24px; /* Размер шрифта */
+		margin-bottom: 10px; /* Отступ снизу */
+	}
+}
+
+/* Информационный блок */
+.information {
+	display: grid; /* Используем grid-раскладку */
+	grid-template-columns: repeat(3, 1fr); /* Три колонки одинаковой ширины */
+	row-gap: 25px; /* Отступ между строками */
+	padding: 15px 0; /* Внутренние отступы сверху и снизу */
+	margin: 25px 0; /* Внешние отступы сверху и снизу */
+
+	&__item {
+		width: 100%; /* Ширина элемента */
+		overflow: hidden; /* Обрезаем переполнение */
+		transition: transform 0.3s ease; /* Переход при трансформации */
+		text-align: center; /* Выравнивание текста по центру */
+		cursor: default; /* Устанавливаем курсор по умолчанию */
+
+		&:hover {
+			transform: scale(1.02); /* Масштабируем элемент при наведении */
+		}
+	}
+
+	&__title {
+		color: #dc3d3d; /* Красный цвет текста */
+		font-size: 36px; /* Размер шрифта */
+		font-weight: 900; /* Толщина шрифта */
+		padding: 0 20px; /* Внутренние отступы слева и справа */
+	}
+
+	&__text {
+		padding: 0 20px; /* Внутренние отступы слева и справа */
+		font-size: 30px; /* Размер шрифта */
+		font-weight: 600; /* Толщина шрифта */
+		line-height: 1.25; /* Межстрочный интервал */
+	}
+}
+
+/* Блок команды */
+.team {
+	display: grid; /* Используем grid-раскладку */
+	grid-template-columns: repeat(4, 1fr); /* Четыре колонки одинаковой ширины */
+	column-gap: 50px; /* Отступ между колонками */
+	margin: 35px 0; /* Внешние отступы сверху и снизу */
+
+	&__item {
+		display: flex; /* Flexbox для элементов */
+		flex-direction: column; /* Колонка для элементов */
+		justify-content: center; /* Центрируем по вертикали */
+		align-items: center; /* Центрируем по горизонтали */
+	}
+
+	&__img {
+		width: 200px; /* Ширина изображения */
+		height: 200px; /* Высота изображения */
+		border-radius: 50%; /* Закругляем углы до круга */
+		overflow: hidden; /* Обрезаем переполнение */
+
+		img {
+			width: 100%; /* Ширина изображения */
+		}
+	}
+
+	&__name {
+		font-size: 24px; /* Размер шрифта */
+		font-weight: 600; /* Толщина шрифта */
+	}
+
+	&__position {
+		font-size: 16px; /* Размер шрифта */
+		text-align: center; /* Выравнивание текста по центру */
+	}
+
+	&__mail {
+		font-size: 18px; /* Размер шрифта */
+		font-style: italic; /* Курсив */
+	}
+}
+
+/* Медиазапросы для адаптивности */
+
+@media (max-width: 1400px) {
+	.container {
+		max-width: 1140px; /* Максимальная ширина контейнера */
+	}
+}
+
+@media (max-width: 1200px) {
+	.container {
+		max-width: 960px; /* Максимальная ширина контейнера */
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 720px; /* Максимальная ширина контейнера */
+	}
+
+	.greeting {
+		width: 70%; /* Увеличиваем ширину блока приветствия */
+
+		&__text {
+			font-size: 40px; /* Уменьшаем размер шрифта */
+		}
+	}
+
+	.information {
+		grid-template-columns: repeat(2, 1fr); /* Две колонки */
+
+		&__item:nth-child(3) {
+			grid-column: span 2; /* Третий элемент занимает две колонки */
+		}
+	}
+
+	.team {
+		grid-template-columns: repeat(2, 1fr); /* Две колонки */
+		row-gap: 25px; /* Отступ между строками */
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 540px; /* Максимальная ширина контейнера */
+	}
+
+	.greeting {
+		width: 70%; /* Увеличиваем ширину блока приветствия */
+		margin: 20px 0; /* Уменьшаем внешние отступы */
+
+		&__text {
+			font-size: 30px; /* Уменьшаем размер шрифта */
+		}
+	}
+
+	.description {
+		&__text {
+			font-size: 20px; /* Уменьшаем размер шрифта */
+		}
+	}
+
+	.information {
+		margin: 10px auto; /* Уменьшаем внешние отступы */
+
+		&__text {
+			font-size: 22px; /* Уменьшаем размер шрифта */
+		}
+
+		&__title {
+			font-size: 28px; /* Уменьшаем размер шрифта */
+		}
+	}
+
+	.team {
+		grid-template-columns: repeat(2, 1fr); /* Две колонки */
+		row-gap: 25px; /* Отступ между строками */
+		margin: 20px 0; /* Внешние отступы сверху и снизу */
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		max-width: 390px; /* Максимальная ширина контейнера */
+	}
+
+	.greeting {
+		width: 100%; /* Ширина блока приветствия */
+
+		&__text {
+			font-size: 28px; /* Уменьшаем размер шрифта */
+		}
+	}
+
+	.description__text {
+		font-size: 18px; /* Уменьшаем размер шрифта */
+	}
+
+	.information {
+		grid-template-columns: repeat(1, 1fr); /* Одна колонка */
+		margin: 10px auto; /* Внешние отступы */
+		&__item:nth-child(3) {
+			grid-column: 1; /* Третий элемент занимает одну колонку */
+		}
+
+		&__text {
+			font-size: 22px; /* Уменьшаем размер шрифта */
+		}
+
+		&__title {
+			font-size: 28px; /* Уменьшаем размер шрифта */
+		}
+	}
+
+	.team {
+		row-gap: 20px; /* Отступ между строками */
+		margin: 20px 0; /* Внешние отступы сверху и снизу */
+		column-gap: 40px; /* Отступ между колонками */
+
+		&__img {
+			width: 175px; /* Уменьшаем ширину изображения */
+			height: 175px; /* Уменьшаем высоту изображения */
+		}
+
+		&__name {
+			font-size: 20px; /* Уменьшаем размер шрифта */
+		}
+
+		&__position {
+			font-size: 14px; /* Уменьшаем размер шрифта */
+		}
+
+		&__mail {
+			font-size: 14px; /* Уменьшаем размер шрифта */
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.container {
+		max-width: 360px; /* Максимальная ширина контейнера */
+	}
+
+	.greeting__text {
+		font-size: 24px; /* Уменьшаем размер шрифта */
+	}
+
+	.description__text {
+		font-size: 16px; /* Уменьшаем размер шрифта */
+		margin-bottom: 5px; /* Уменьшаем отступ снизу */
+	}
+
+	.information {
+		grid-template-columns: repeat(1, 1fr); /* Одна колонка */
+		margin: 5px auto; /* Внешние отступы */
+		padding: 5px; /* Внутренние отступы */
+
+		&__item:nth-child(3) {
+			grid-column: 1; /* Третий элемент занимает одну колонку */
+		}
+
+		&__text {
+			font-size: 22px; /* Уменьшаем размер шрифта */
+		}
+
+		&__title {
+			font-size: 28px; /* Уменьшаем размер шрифта */
+		}
+	}
+
+	.team {
+		row-gap: 20px; /* Отступ между строками */
+		margin: 10px 0; /* Внешние отступы сверху и снизу */
+		column-gap: 20px; /* Уменьшаем отступ между колонками */
+
+		&__img {
+			width: 170px; /* Уменьшаем ширину изображения */
+			height: 170px; /* Уменьшаем высоту изображения */
+		}
+
+		&__name {
+			font-size: 18px; /* Уменьшаем размер шрифта */
+		}
+
+		&__position {
+			font-size: 14px; /* Уменьшаем размер шрифта */
+		}
+
+		&__mail {
+			font-size: 14px; /* Уменьшаем размер шрифта */
+		}
+	}
+}
+

@@ -1,0 +1,110 @@
+.form {
+	display: flex; // Устанавливаем flexbox для формы
+	align-items: center; // Центрируем элементы по вертикали
+	flex-direction: column; // Размещаем элементы в колонку
+	width: 100%; // Ширина формы 100%
+
+	.title {
+		font-size: 30px; // Размер шрифта заголовка
+		margin-bottom: 15px; // Нижний отступ заголовка
+		text-align: center; // Выравнивание текста по центру
+	}
+
+	.wrapper {
+		padding: 20px; // Внутренние отступы обертки
+		background: #eeeeee; // Цвет фона обертки
+		border-radius: 15px; // Закругленные углы обертки
+	}
+
+	.content {
+		display: flex; // Устанавливаем flexbox для содержимого
+	}
+
+	.field {
+		display: block; // Блочное отображение
+		width: 300px; // Ширина поля ввода
+		outline: 1px solid #222; // Контур поля ввода
+		padding: 5px; // Внутренние отступы
+		margin-right: 25px; // Правый отступ
+		margin-bottom: 20px; // Нижний отступ
+
+		&:focus {
+			outline-color: #dc3d3d; // Цвет контура при фокусе
+		}
+	}
+
+	.textarea {
+		width: 300px; // Ширина текстовой области
+		height: 150px; // Высота текстовой области
+		outline: 1px solid #222; // Контур текстовой области
+		padding: 5px; // Внутренние отступы
+		resize: none; // Запрещаем изменение размера
+
+		&:focus {
+			outline-color: #dc3d3d; // Цвет контура при фокусе
+		}
+	}
+
+	.error {
+		height: 10px; // Высота блока с ошибкой
+		color: #dc3d3d; // Цвет текста ошибки
+		font-size: 14px; // Размер шрифта ошибки
+		line-height: 1; // Высота строки
+		margin-bottom: 10px; // Нижний отступ ошибки
+	}
+
+	.errorInput {
+		outline: 1px solid #dc3d3d; // Контур поля с ошибкой
+	}
+
+	.button {
+		margin-top: 10px; // Верхний отступ кнопки
+		width: 100%; // Ширина кнопки 100%
+		height: 30px; // Высота кнопки
+		outline: 1px solid #222; // Контур кнопки
+		background-color: #222; // Цвет фона кнопки
+		color: #fff; // Цвет текста кнопки
+		font-weight: 600; // Жирность шрифта
+		transition: background 0.3s ease; // Переход для фона
+
+		&:hover {
+			background: #dc3d3d; // Цвет фона при наведении
+		}
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 992px
+@media (max-width: 992px) {
+	.form {
+		.title {
+			font-size: 24px; // Уменьшение размера шрифта заголовка
+		}
+
+		.content {
+			flex-direction: column; // Изменение направления flexbox на колонку
+		}
+
+		.field,
+		.textarea {
+			margin-right: 0; // Убираем правый отступ
+		}
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 576px
+@media (max-width: 576px) {
+	.form {
+		.title {
+			font-size: 18px; // Уменьшение размера шрифта заголовка
+		}
+	}
+}
+
+// Медиазапрос для экранов с максимальной шириной 420px
+@media (max-width: 420px) {
+	.form {
+		.title {
+			font-size: 16px; // Уменьшение размера шрифта заголовка
+		}
+	}
+}

@@ -1,0 +1,115 @@
+.profile {
+	&__content {
+		display: flex; // Flexbox для контейнера контента профиля
+
+		.first {
+			width: 300px; // Ширина левого блока
+			margin-right: 30px; // Правый отступ левого блока
+		}
+		.second {
+			width: 100%; // Ширина правого блока
+		}
+	}
+
+	&__title {
+		font-size: 30px; // Размер шрифта заголовка
+		margin-bottom: 20px; // Нижний отступ заголовка
+	}
+
+	&__img {
+		width: 300px; // Ширина контейнера изображения
+		height: 300px; // Высота контейнера изображения
+		overflow: hidden; // Скрываем переполняющее содержимое
+		margin-bottom: 10px; // Нижний отступ
+		background-color: #333; // Фон контейнера изображения
+		outline: 1px solid #222; // Обводка контейнера изображения
+		position: relative; // Относительное позиционирование
+
+		&.active {
+			outline: 3px solid #dc3d3d; // Красная обводка при активности
+		}
+
+		&_edit {
+			position: absolute; // Абсолютное позиционирование
+			top: 0;
+			right: 0;
+			color: #fff; // Белый цвет текста
+			user-select: none; // Запрет на выделение текста
+			display: flex; // Flexbox для контейнера редактирования
+			justify-content: center; // Центрирование по горизонтали
+			align-items: center; // Центрирование по вертикали
+			width: 100%; // Ширина контейнера редактирования
+			height: 100%; // Высота контейнера редактирования
+			font-size: 24px; // Размер шрифта
+			text-transform: uppercase; // Преобразование текста в верхний регистр
+			background-color: rgba(0, 0, 0, 0.7); // Полупрозрачный черный фон
+		}
+
+		div {
+			width: 100%; // Ширина вложенного div
+			height: 100%; // Высота вложенного div
+			background-position: 50% 50%; // Позиционирование фона
+			background-size: cover; // Масштабирование фона
+		}
+
+		input {
+			width: 100%; // Ширина поля ввода
+			height: 100%; // Высота поля ввода
+			opacity: 0; // Полностью прозрачное поле ввода
+		}
+	}
+
+	&__btn {
+		width: 100%; // Ширина кнопки
+		cursor: pointer; // Указатель при наведении
+		background-color: #606060; // Фон кнопки
+		color: #fff; // Белый цвет текста
+		text-align: center; // Центрирование текста
+		padding: 5px 10px; // Внутренние отступы
+		margin-bottom: 5px; // Нижний отступ
+
+		&:hover {
+			background-color: #dc3d3d; // Фон кнопки при наведении
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.title {
+		font-size: 25px; // Уменьшаем размер шрифта заголовка
+		margin-bottom: 10px; // Уменьшаем нижний отступ заголовка
+	}
+}
+
+@media (max-width: 768px) {
+	.profile {
+		&__content {
+			flex-direction: column; // Вертикальное расположение контента
+			align-items: center; // Центрирование по горизонтали
+
+			.first {
+				margin-bottom: 15px; // Нижний отступ левого блока
+				margin-right: 0; // Убираем правый отступ
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.profile {
+		&__content {
+			.first {
+				margin-bottom: 5px; // Еще уменьшаем нижний отступ левого блока
+			}
+		}
+
+		&__btn {
+			font-size: 14px; // Уменьшаем размер шрифта кнопки
+		}
+
+		&__title {
+			font-size: 20px; // Уменьшаем размер шрифта заголовка
+			text-align: center; // Центрируем текст заголовка
+		}
+	}
+}
