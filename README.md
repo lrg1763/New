@@ -91,7 +91,3 @@
 - **database/**: файл базы данных SQLite
 
 
-Через докер:
-docker build -t melodymart .
-docker run -p 3000:3000 melodymart
->>>>>>> fb73f5d314b67fda88699c065a7a35745c9e499f
