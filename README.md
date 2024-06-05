@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## MelodyStore
 
 ### Описание проекта
@@ -90,10 +90,6 @@
 - **frontend/**: клиентская часть приложения
 - **database/**: файл базы данных SQLite
 
-=======
-Как запустить проект :
-npm install
-npm start
 
 Через докер:
 docker build -t melodymart .
