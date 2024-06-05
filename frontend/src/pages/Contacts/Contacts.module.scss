@@ -52,7 +52,7 @@
 			display: inline-block; /* Инлайн-блок */
 			cursor: pointer; /* Курсор в виде указателя */
 			font-weight: normal; /* Нормальная толщина шрифта */
-			color: #dc3d3d; /* Цвет текста */
+			color: #0942ff; /* Цвет текста */
 			text-decoration: underline; /* Подчеркивание текста */
 
 			&:hover {
@@ -73,7 +73,7 @@
 			display: flex; /* Flexbox для элемента */
 			align-items: center; /* Выравнивание по центру */
 			font-size: 20px; /* Размер шрифта */
-			color: #dc3d3d; /* Цвет текста */
+			color: #2426c5; /* Цвет текста */
 			text-decoration: none; /* Убираем подчеркивание текста */
 			margin-bottom: 10px; /* Отступ снизу */
 			transition: all 0.3s ease; /* Переход для всех изменений */

@@ -38,10 +38,8 @@ const Index: FC = () => {
 	// Определяем категории жанров
 	const genres = [
 		{ key: '', name: 'All' },
-		{ key: 'alternative rock', name: 'Rock' },
-		{ key: 'industrial metal', name: 'Industrial metal' },
-		{ key: 'alternative rap', name: 'Rap' },
-		{ key: 'hip hop', name: 'Indie' },
+
+
 	]
 
 	// Определяем параметры сортировки
@@ -77,7 +75,7 @@ const Index: FC = () => {
 			<Helmet>
 				<meta charSet='utf-8' />
 				<meta name='description' content='music store react main page' />
-				<title>MelodyMart - Главная страница</title>
+				<title>MelodyStore - Главная страница</title>
 			</Helmet>
 			<CarouselBox />
 			<div className={styles.container}>

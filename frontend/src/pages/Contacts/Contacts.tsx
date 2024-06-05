@@ -19,57 +19,54 @@ const Contacts = () => {
 			</Helmet>
 			<div className={styles.container}>
 				<div className={styles.contact}>
-					<h1 className={styles.contact__title}>Контактная информация</h1>
+					<h1 className={styles.contact__title}>Информация</h1>
 					<div className={styles.contact__grid}>
 						{/* Раздел с адресной информацией */}
 						<div className={styles.contact__item}>
-							<div className={styles.contact__item__title}>Адрес</div>
+							<div className={styles.contact__item__title}>Lorem ipsum </div>
 							<div className={styles.contact__item__text}>
-								<span>Наш офис расположен по адресу</span>
+								<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
 								<p>
-									Улица Музыкантов, дом 10. Почтовый адрес магазина: 123456, город Музыка, улица
-									Музыкантов, дом 10.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
 								</p>
-								<span>Адрес нашего офиса во Франции</span>
+								<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 								<p>
-									10 Rue des Musiciens, 75001 Paris Адрес для почты: 123456, ville de Musique, 10
-									Rue des Musiciens, 75001 Paris.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
 								</p>
-								<span>Обратите внимание</span>
+								<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
 								<p>
-									Французский офис открыт только для сотрудников и официальных партнеров компании.
-									Мы не принимаем посетителей и не проводим экскурсий. Присутствие посторонних на
-									территории офиса (вне холла) запрещено.
-								</p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 							</div>
 						</div>
 						{/* Раздел с информацией о контактах через интернет */}
 						<div className={styles.contact__item}>
-							<div className={styles.contact__item__title}>Через интернет</div>
+							<div className={styles.contact__item__title}>Lorem ipsum dolor sit amet</div>
 							<div className={styles.contact__item__text}>
-								<span>Служба поддержки</span>
+								<span>Lorem ipsum dolor sit amet</span>
 								<p>
-									Контактную информацию службы поддержки вы найдете{' '}
-									<b className={styles.contact__item__link}>здесь</b>.
+								Lorem ipsum dolor sit amet{' '}
+									<b className={styles.contact__item__link}>Lorem ipsum dolor sit amet</b>.
 								</p>
-								<span>Пресса</span>
+								<span>Lorem ipsum dolor sit amet</span>
 								<p>
-									Контактную информацию для журналистов вы найдете{' '}
-									<b className={styles.contact__item__link}>здесь</b>.
+								Lorem ipsum dolor sit amet{' '}
+									<b className={styles.contact__item__link}>Lorem </b>.
 								</p>
-								<span>Почтовый адрес</span>
+								<span>Lorem ipsum dolor sit amet</span>
 								<div className={styles.contact__item__address}>
-									<p>MusicStore SAS</p>
-									<p>BP 12345</p>
-									<p>Ville de Musique</p>
-									<p>10 Rue des Musiciens</p>
-									<p>75001 Paris</p>
+									<p>Lorem ipsum dolor sit amet</p>
+									<p>Lorem ipsum dolor sit amet</p>
+									<p>Lorem ipsum dolor sit amet</p>
+									<p>Lorem ipsum dolor sit amet</p>
+									<p>Lorem ipsum dolor sit amet</p>
 								</div>
 							</div>
 						</div>
 						{/* Раздел с информацией о социальных сетях */}
 						<div className={styles.contact__item}>
-							<div className={styles.contact__item__title}>Мы в соцсетях:</div>
+							<div className={styles.contact__item__title}>Lorem ipsum dolor sit amet:</div>
 							<div className={styles.contact__item__text}>
 								<div className={styles.contact__item__link_media}>
 									<FaTelegram />
@@ -83,10 +80,6 @@ const Contacts = () => {
 									<FaYoutube />
 									<p>YouTube</p>
 								</div>
-								<div className={styles.contact__item__link_media}>
-									<FaTwitter />
-									<p>Twitter</p>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -96,7 +89,7 @@ const Contacts = () => {
 							<div>
 								<Map
 									className={styles.contact__map__item}
-									defaultState={{ center: [48.85, 2.35], zoom: 9 }} // Координаты центра карты и уровень масштаба
+									defaultState={{ center: [55.7558, 37.6176], zoom: 9}} // Координаты центра карты и уровень масштаба
 								/>
 							</div>
 						</YMaps>

@@ -27,7 +27,7 @@ const Header: FC<HeaderProps> = ({ onShowModalOrder }) => {
 			<div className={styles.item}> {/* Элемент заголовка */}
 				<div className={styles.container}> {/* Контейнер для логотипа и навигации */}
 					<h1 className={styles.logo} onClick={() => scrollToTop()}> {/* Логотип с функцией прокрутки вверх */}
-						MelodyMart
+						MelodyStore
 					</h1>
 					<ul className={styles.nav}> {/* Список навигации */}
 						<FaShoppingCart
@@ -60,7 +60,7 @@ const Header: FC<HeaderProps> = ({ onShowModalOrder }) => {
 										: styles.link
 								}
 							>
-								О нас
+								Отзывы
 							</NavLink>
 						</li>
 						<li>

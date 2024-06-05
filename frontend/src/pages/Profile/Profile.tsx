@@ -76,11 +76,11 @@ const Profile: FC = () => {
       <Helmet>
         <meta charSet='utf-8' />
         <meta name='description' content='music store react cabinet' />
-        <title>Music Store - Личный кабинет</title>
+        <title>MelodyStore - Аккаунт</title>
       </Helmet>
       <div className={styles.container}>
         <div className={styles.profile}>
-          <h1 className={styles.profile__title}>Личный кабинет</h1>
+          <h1 className={styles.profile__title}>Кабинет</h1>
           <Tabs tabs={tabs} />
         </div>
       </div>
